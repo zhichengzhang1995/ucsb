@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp"
+    android:background="@drawable/c1"
+    tools:context="com.example.rongjian.googlemap.TextReg">
+
+    <TextView
+        android:id="@+id/status_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="CLICK TEXT TO GRAB"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:gravity="center"
+        android:id="@+id/text_value"
+        android:layout_below="@+id/status_message"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="110dp"
+        android:layout_alignRight="@+id/status_message"
+        android:layout_alignEnd="@+id/status_message" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_camera_48"
+        android:id="@+id/read_text"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@id/status_message"/>
+    <!--android:layout_centerHorizontal="true" />-->
+
+    <ImageButton
+        android:id="@+id/search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/status_message"
+        android:layout_marginStart="0dp"
+        android:src="@drawable/ic_magnify" />
+    <!--android:layout_centerHorizontal="true" />-->
+
+    <CheckBox
+        android:id="@+id/use_flash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/read_text"
+        android:layout_centerHorizontal="true"
+        android:checked="false"/>
+
+    <ImageView
+        android:id="@+id/flasher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/use_flash"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_flash_on" />
+
+</RelativeLayout>

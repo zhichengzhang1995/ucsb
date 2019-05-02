@@ -1,0 +1,38 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.example.rongjian.googlemap"
+        minSdkVersion 23
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        resValue "string", "google_maps_key", (project.findProperty("GOOGLE_MAPS_API_KEY") ?: "")
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation 'com.android.support:appcompat-v7:26.+'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.google.android.gms:play-services-maps:10.2.0'
+    //Google play services
+    implementation 'com.google.android.gms:play-services:11.4.0'
+    implementation 'com.android.support:design:26.1.0'
+    implementation 'com.google.maps.android:android-maps-utils:0.5+'
+    implementation files('/Users/zhangzhicheng/Downloads/guava-14.0.1.jar')
+    implementation files('/Users/zhangzhicheng/Downloads/commons-lang3-3.1.jar')
+}
